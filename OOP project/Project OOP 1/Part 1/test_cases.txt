@@ -1,0 +1,47 @@
+Test Case 1: Normal testing (Success run)
+Input: Customer ID 810003, Item IDs 57464, 23242, 0
+Expected Output: Shows customer exists.
+Lists "Almonds Ground Blanched - $2.99" and "Apricots - Halves - $0.89".
+Total cost: $3.88, 2 items purchased.
+
+Purpose: Verifies that the program can process a normal order with valid customer and item IDs.
+
+
+
+Test Case 2: Invalid Customer
+Input: Customer ID 999999
+Expected Output: "Customer 999999 not found!" message.
+Program exits.
+Purpose: Ensures the program handles an invalid customer ID correctly by exiting with an appropriate message.
+
+
+
+Test Case 3: Invalid Item
+Input: Customer ID 810003, Item IDs 57464, 99999, 0
+Expected Output: Shows "Almonds Ground Blanched - $2.99".
+Shows "Item 99999 not found!".
+Total cost: $2.99, 1 item purchased.
+Purpose: Verifies that the program handles an invalid item ID by displaying an error message and continuing the order.
+
+
+
+Test Case 4: No Items Ordered
+Input: Customer ID 810003, Item ID 0
+Expected Output: Total cost: $0.00, 0 items purchased.
+Purpose: Tests the case where the user enters 0 immediately, ensuring the program handles an empty order correctly.
+
+
+
+Test Case 5: Multiple Same Items
+Input: Customer ID 810003, Item IDs 57464, 57464, 0
+Expected Output: Shows "Almonds Ground Blanched - $2.99" twice.
+Total cost: $5.98, 2 items purchased.
+Purpose: Ensures the program correctly accumulates the cost when the same item is ordered multiple times.
+
+
+
+Test Case 6: Decimal Precision
+Input: Customer ID 810003, Item IDs 23242, 0
+Expected Output: Shows "Apricots - Halves - $0.89".
+Total cost: $0.89 (not $0.9).
+Purpose: Verifies that the total cost is displayed with proper decimal precision (two decimal places, e.g., $0.89 instead of $0.9).
